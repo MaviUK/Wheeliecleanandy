@@ -9,16 +9,16 @@ function BookingModal({ onClose }) {
   const [email, setEmail] = useState('');
 
   const handleSend = () => {
-    const message = \`Hi Wheelie Clean Andy! I'd like to book a bin clean.
+    const message = `Hi Wheelie Clean Andy! I'd like to book a bin clean.
 
-Name: \${name}
-Bin: \${binType} x\${binCount}
-Frequency: \${frequency}
-Address: \${address}
-Email: \${email}\`;
+Name: ${name}
+Bin: ${binType} x${binCount}
+Frequency: ${frequency}
+Address: ${address}
+Email: ${email}`;
 
     const phone = "447583847902";
-    const url = \`https://wa.me/\${phone}?text=\${encodeURIComponent(message)}\`;
+    const url = `https://wa.me/${phone}?text=${encodeURIComponent(message)}`;
     window.open(url, '_blank');
   };
 
