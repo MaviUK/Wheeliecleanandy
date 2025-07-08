@@ -9,11 +9,10 @@ function App() {
 
   return (
     <div className="bg-[#fffced] text-[#214b64] font-sans">
-      <header className="relative">
-        <img src={banner} alt="Banner" className="w-full h-64 object-cover shadow-lg" />
-        <div className="absolute inset-0 bg-[#5cc9ea]/80 flex items-center justify-between px-6 py-4">
+      <header className="bg-[#5cc9ea] py-6 shadow-md">
+        <div className="max-w-6xl mx-auto flex justify-between items-center px-4">
           <div className="flex items-center gap-4">
-            <img src={logo} alt="Logo" className="w-16 h-auto bg-white rounded-full p-2" />
+            <img src={logo} alt="Logo" className="w-16 h-auto" />
             <h1 className="text-3xl font-bold text-white">Wheelie Clean Andy</h1>
           </div>
           <button
@@ -26,17 +25,10 @@ function App() {
       </header>
 
       <section className="max-w-6xl mx-auto py-10 px-4">
+        <img src={banner} alt="Banner" className="rounded-xl w-full shadow-lg mb-8" />
         <div className="text-center">
           <h2 className="text-4xl font-bold mb-4 text-[#214b64]">Professional Bin Cleaning</h2>
           <p className="text-lg text-[#214b64]">Fresh, fast and eco-friendly bin cleaning service you can rely on.</p>
-          <div className="mt-6">
-            <button
-              onClick={() => setShowModal(true)}
-              className="bg-[#de3d2b] hover:bg-red-600 px-6 py-3 rounded-full text-white font-bold shadow"
-            >
-              Book Now
-            </button>
-          </div>
         </div>
       </section>
 
@@ -56,6 +48,17 @@ function App() {
             ))}
           </div>
         </div>
+      </section>
+
+      <section className="bg-[#5cc9ea] text-white text-center py-14">
+        <h3 className="text-3xl font-bold mb-4">Let’s Get Your Bins Sparkling</h3>
+        <p className="mb-6 text-lg">Serving Bangor and surrounding areas.</p>
+        <button
+          onClick={() => setShowModal(true)}
+          className="bg-[#de3d2b] hover:bg-red-600 px-6 py-3 rounded-full text-white font-bold shadow"
+        >
+          Book a Clean
+        </button>
       </section>
 
       <footer className="bg-[#214b64] text-white text-center py-6 text-sm">
