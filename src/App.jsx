@@ -27,7 +27,7 @@ function App() {
       <section className="max-w-6xl mx-auto py-10 px-4">
         <img src={banner} alt="Banner" className="rounded-xl w-full shadow-lg mb-8" />
         <div className="text-center">
-          <h2 className="text-4xl font-bold mb-4 text-[#214b64]">Professional Bin Cleaning</h2>
+          <h2 className="text-4xl font-bold mb-4 text-[#214b64]">Starting a New Bin Cleaning Service!</h2>
           <p className="text-lg text-[#214b64]">Fresh, fast and eco-friendly bin cleaning service you can rely on.</p>
         </div>
       </section>
