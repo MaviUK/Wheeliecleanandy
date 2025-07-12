@@ -6,48 +6,46 @@ export default function App() {
 
   return (
     <div className="font-sans text-gray-800">
-      {/* Hero */}
-      <section className="bg-white text-center py-20 px-6">
-        <img src="/andy-logo.png" alt="Wheelie Clean Andy" className="mx-auto mb-6 w-[20rem] md:w-[25rem]" />
-        <h1 className="text-4xl md:text-5xl font-bold text-green-700">Wheelie Bin Cleaning, Done Right</h1>
-        <p className="mt-4 text-lg text-gray-600 max-w-xl mx-auto">Professional, friendly bin cleaning that leaves your bins sparkling and fresh — without the drama.</p>
-        <button
-          onClick={() => setShowModal(true)}
-          className="mt-8 bg-green-600 hover:bg-green-700 text-white px-8 py-4 rounded-full text-lg font-bold shadow-md"
-        >
-          📲 Book a Bin Clean
-        </button>
-      </section>
+      {/* Header */}
+      <header className="bg-white shadow-md sticky top-0 z-50">
+        <div className="max-w-7xl mx-auto px-4 py-3 flex items-center justify-between">
+          <img src="/company-logo.png" alt="Wheelie Clean Andy" className="w-32 h-auto" />
+          <nav className="hidden md:flex gap-6 font-semibold text-sm text-gray-700">
+            <a href="#services" className="hover:text-orange-500">Services</a>
+            <a href="#about" className="hover:text-orange-500">About</a>
+            <a href="#" onClick={() => setShowModal(true)} className="bg-orange-500 hover:bg-orange-600 text-white py-2 px-4 rounded-full font-bold text-sm">
+              Book Now
+            </a>
+          </nav>
+        </div>
+      </header>
 
-      {/* How It Works */}
-      <section className="bg-gray-50 py-20 px-6 text-center">
-        <h2 className="text-3xl font-bold mb-12 text-green-700">How It Works</h2>
-        <div className="max-w-4xl mx-auto grid md:grid-cols-3 gap-10">
-          {[
-            ["📅", "You Book", "Choose your bins and when you want them cleaned."],
-            ["💦", "We Clean", "We arrive on time and give them a sparkling wash."],
-            ["😄", "You Smile", "Enjoy fresh bins and a happier home!"]
-          ].map(([icon, title, desc], i) => (
-            <div key={i} className="bg-white rounded-xl shadow p-6">
-              <div className="text-4xl mb-3">{icon}</div>
-              <h3 className="text-xl font-semibold text-green-700">{title}</h3>
-              <p className="text-gray-600 mt-2">{desc}</p>
-            </div>
-          ))}
+      {/* Hero Banner */}
+      <section className="relative h-[90vh] bg-cover bg-center flex items-center justify-center text-center text-white"
+        style={{ backgroundImage: 'url(/andy-banner.png)' }}>
+        <div className="bg-black bg-opacity-50 p-8 rounded-xl max-w-2xl mx-auto">
+          <h1 className="text-4xl md:text-5xl font-bold mb-4">Wheelie Bin Cleaning, Done Right</h1>
+          <p className="text-lg">Sparkling clean bins. Fresh smells. Friendly faces. Book Andy today.</p>
+          <button
+            onClick={() => setShowModal(true)}
+            className="mt-6 bg-pink-500 hover:bg-pink-600 text-white px-6 py-3 rounded-full font-bold"
+          >
+            📲 Book a Clean
+          </button>
         </div>
       </section>
 
       {/* Services */}
-      <section className="bg-white py-20 px-6 text-center">
-        <h2 className="text-3xl font-bold mb-12 text-green-700">What We Clean</h2>
+      <section id="services" className="bg-white py-20 px-6 text-center">
+        <h2 className="text-3xl font-bold mb-12 text-orange-500">What We Clean</h2>
         <div className="max-w-4xl mx-auto grid md:grid-cols-3 gap-10">
           {[
-            ["Green Bin", "Food & garden waste — we leave it spotless."],
-            ["Black Bin", "General waste — fresh, deodorised and clean."],
-            ["Blue Bin", "Recycling — we keep it bug and smell free."]
+            ["Green Bin", "Garden waste, cleaned and deodorised."],
+            ["Black Bin", "General waste bins made fresh."],
+            ["Blue Bin", "Recycling bins kept tidy and bug-free."]
           ].map(([title, desc], i) => (
-            <div key={i} className="bg-gray-100 rounded-xl p-6">
-              <h3 className="text-xl font-semibold text-green-700">{title}</h3>
+            <div key={i} className="bg-gray-50 rounded-xl p-6 shadow">
+              <h3 className="text-xl font-semibold text-orange-600">{title}</h3>
               <p className="text-gray-600 mt-2">{desc}</p>
             </div>
           ))}
@@ -55,19 +53,19 @@ export default function App() {
       </section>
 
       {/* About Andy */}
-      <section className="bg-gray-50 py-20 px-6 text-center">
-        <h2 className="text-3xl font-bold mb-6 text-green-700">Who’s Andy?</h2>
+      <section id="about" className="bg-gray-50 py-20 px-6 text-center">
+        <h2 className="text-3xl font-bold mb-6 text-orange-500">Meet Andy</h2>
         <p className="max-w-3xl mx-auto text-lg text-gray-700">
-          I'm Andy — your friendly local bin-cleaning guy. With my cameraman Bobs, we’re on a mission to make Bangor’s bins the cleanest (and best-smelling) in the UK.
+          I'm Andy – your friendly neighbourhood bin cleaner. With Cameraman Bobs by my side, we're on a mission to banish bin stink from every street.
         </p>
       </section>
 
       {/* Footer */}
-      <footer className="bg-green-700 text-white py-8 text-center text-sm">
+      <footer className="bg-orange-500 text-white py-6 text-center text-sm">
         © 2025 Wheelie Clean Andy · 📞 07583 847902
       </footer>
 
-      {/* WhatsApp Booking Modal */}
+      {/* Booking Modal */}
       {showModal && (
         <div className="fixed inset-0 bg-black bg-opacity-70 flex justify-center items-center z-50">
           <div className="bg-white text-black p-6 rounded-xl w-full max-w-md relative">
@@ -103,7 +101,7 @@ export default function App() {
                 <option>Monthly</option>
               </select>
               <input name="address" required className="w-full p-2 mb-3 border rounded" placeholder="Full Address" />
-              <button type="submit" className="w-full bg-green-600 hover:bg-green-700 text-white py-2 rounded font-bold">
+              <button type="submit" className="w-full bg-pink-500 hover:bg-pink-600 text-white py-2 rounded font-bold">
                 Send via WhatsApp
               </button>
             </form>
