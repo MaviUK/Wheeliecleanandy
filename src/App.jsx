@@ -7,7 +7,7 @@ export default function App() {
     <div className="bg-[#050505] text-white font-sans">
       {/* Hero */}
       <section className="text-center py-16 px-4 bg-[#1a1a1a]">
-        <img src="/andy-logo.png" alt="Wheelie Clean Andy" className="mx-auto mb-6 w-64 md:w-80" />
+        <img src="/andy-logo.png" alt="Wheelie Clean Andy" className="mx-auto mb-8 w-[30rem] md:w-[35rem]" />
         <h1 className="text-4xl md:text-5xl font-bold text-orange-500">Wheelie Bin Cleaning, Done Fun</h1>
         <p className="mt-4 text-lg text-gray-300 max-w-xl mx-auto">
           Friendly, fast, and fresh-smelling bins. Let Andy sort your stink!
