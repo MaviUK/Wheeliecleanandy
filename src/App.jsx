@@ -52,7 +52,7 @@ function App() {
 
       <section className="bg-[#5cc9ea] text-white text-center py-14">
         <h3 className="text-3xl font-bold mb-4">Let’s Get Your Bins Sparkling</h3>
-        <p className="mb-6 text-lg">Serving Bangor and surrounding areas.</p>
+        <p className="mb-6 text-lg">Serving Manchester and surrounding areas.</p>
         <button
           onClick={() => setShowModal(true)}
           className="bg-[#de3d2b] hover:bg-red-600 px-6 py-3 rounded-full text-white font-bold shadow"
