@@ -36,7 +36,7 @@ export default function App() {
         </div>
       </div>
 
-      <div className="bg-white shadow-md flex items-center justify-between px-6 py-4 text-lg font-bold text-orange-600">
+     <div className="absolute bottom-0 left-0 w-full bg-white/90 backdrop-blur-sm shadow-md flex items-center justify-between px-6 py-3 text-lg font-bold text-orange-600 z-20">
         <div className="flex gap-6">
           <a href="#services">Services</a>
           <a href="#about">About</a>
