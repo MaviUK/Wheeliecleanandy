@@ -1,86 +1,61 @@
-import { useState } from "react";
+
+import React from 'react';
 
 export default function App() {
-  const [showModal, setShowModal] = useState(false);
-
-  const handleBookNow = () => {
-    window.open("https://wa.me/447555178484?text=Hi%20I%20want%20my%20bin%20cleaned!", "_blank");
-  };
-
   return (
-    <div className="bg-black text-white min-h-screen">
-      {/* Hero Banner */}
-      <img
-        src="/banner.jpg"
-        alt="Wheelie Clean Andy Banner"
-        className="w-full h-screen object-cover"
-      />
+    <div className="min-h-screen flex flex-col items-center text-center">
+      <header className="bg-green-800 text-white w-full py-6">
+        <nav className="text-2xl flex justify-center gap-8 font-bold">
+          <a href="#whatwedo">What We Do</a>
+          <a href="#benefits">Benefits</a>
+          <button
+            onClick={() => window.open('https://wa.me/447555178484', '_blank')}
+            className="bg-green-500 px-6 py-2 rounded-full text-white"
+          >
+            Book Now
+          </button>
+          <a href="#whyandy">Why Andy</a>
+          <a href="#journey">My Journey</a>
+        </nav>
+      </header>
 
-      {/* Navigation */}
-      <nav className="flex justify-center items-center py-6 text-xl font-bold tracking-widest space-x-6 uppercase bg-black">
-        <a href="#services" className="hover:text-lime-300">What We Do</a>
-        <a href="#benefits" className="hover:text-lime-300">Benefits</a>
-        <button
-          onClick={handleBookNow}
-          className="px-6 py-2 bg-pink-600 text-white rounded-full hover:bg-pink-500 text-2xl shadow-lg"
+      <section id="whatwedo" className="py-20 px-4 max-w-3xl text-xl">
+        <h2 className="text-4xl font-bold mb-4 text-green-700">What We Do</h2>
+        <p>
+          We clean household wheelie bins using eco-friendly methods that are safe for your family and the environment. We remove smells, grime, insects, and bacteria so your bins stay fresh and clean all year round.
+        </p>
+      </section>
+
+      <section id="benefits" className="py-20 px-4 max-w-3xl text-xl bg-gray-100">
+        <h2 className="text-4xl font-bold mb-4 text-green-700">Benefits</h2>
+        <ul className="list-disc list-inside text-left">
+          <li>Eliminates foul odours</li>
+          <li>Deters insects and pests</li>
+          <li>Improves hygiene and sanitation</li>
+          <li>Better image and curb appeal</li>
+          <li>Safe and biodegradable detergents</li>
+        </ul>
+      </section>
+
+      <section id="whyandy" className="py-20 px-4 max-w-3xl text-xl">
+        <h2 className="text-4xl font-bold mb-4 text-green-700">Why Andy</h2>
+        <p>
+          After being made redundant, I teamed up with my nephew Bob (and his camera!) to build something real — a local bin cleaning service from scratch. We're documenting the full journey — real hustle, no fluff. Join the adventure!
+        </p>
+      </section>
+
+      <section id="journey" className="py-20 px-4 max-w-3xl text-xl bg-gray-100">
+        <h2 className="text-4xl font-bold mb-8 text-green-700">My Journey on TikTok</h2>
+        <blockquote
+          className="tiktok-embed"
+          cite="https://www.tiktok.com/@wheeliecleanandy"
+          data-unique-id="wheeliecleanandy"
+          data-embed-type="creator"
+          style={{ maxWidth: '780px', minHeight: '400px' }}
         >
-          Book Now
-        </button>
-        <a href="#whyandy" className="hover:text-lime-300">Why Andy</a>
-        <a href="#journey" className="hover:text-lime-300">My Journey</a>
-      </nav>
-
-      {/* What We Do */}
-      <section id="services" className="py-20 px-6 bg-white text-black">
-        <h2 className="text-5xl font-bold text-lime-700 mb-6 uppercase tracking-wide">What We Do</h2>
-        <div className="max-w-4xl mx-auto text-2xl space-y-4">
-          <p>We clean household bins on a regular schedule, removing dirt, grime, and odor.</p>
-          <p>All cleaning is done in an eco-friendly manner using biodegradable cleaning solutions and water-saving techniques.</p>
-        </div>
-      </section>
-
-      {/* Benefits */}
-      <section id="benefits" className="py-20 px-6 bg-lime-100 text-black">
-        <h2 className="text-5xl font-bold text-orange-600 mb-6 uppercase tracking-wide">Benefits</h2>
-        <div className="max-w-4xl mx-auto text-2xl space-y-4">
-          <p>✔️ No more smelly bins attracting flies.</p>
-          <p>✔️ Eco-friendly and safe for kids and pets.</p>
-          <p>✔️ Affordable, professional, and hassle-free.</p>
-        </div>
-      </section>
-
-      {/* Why Andy */}
-      <section id="whyandy" className="py-20 px-6 bg-white text-black">
-        <h2 className="text-5xl font-bold text-pink-600 mb-6 uppercase tracking-wide">Why Andy</h2>
-        <div className="max-w-4xl mx-auto text-2xl space-y-6">
-          <p>I was made redundant, and with my nephew Bob behind the camera, we’ve decided to film and build this business from the ground up. We’re bringing the bins back to life — one street at a time.</p>
-          <p>Follow us and be part of the journey from nothing to something real.</p>
-        </div>
-      </section>
-
-      {/* My Journey / TikTok Embed */}
-      <section id="journey" className="py-20 px-6 bg-black text-white">
-        <h2 className="text-5xl font-bold text-pink-500 mb-6 uppercase tracking-wide text-center">My Journey</h2>
-        <div className="flex flex-wrap justify-center gap-6">
-          <iframe
-            src="https://www.tiktok.com/embed/v2/1"
-            width="325"
-            height="570"
-            allowFullScreen
-          ></iframe>
-          <iframe
-            src="https://www.tiktok.com/embed/v2/2"
-            width="325"
-            height="570"
-            allowFullScreen
-          ></iframe>
-          <iframe
-            src="https://www.tiktok.com/embed/v2/3"
-            width="325"
-            height="570"
-            allowFullScreen
-          ></iframe>
-        </div>
+          <section>Loading TikTok...</section>
+        </blockquote>
+        <script async src="https://www.tiktok.com/embed.js"></script>
       </section>
     </div>
   );
