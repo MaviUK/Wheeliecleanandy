@@ -22,12 +22,12 @@ export default function App() {
   };
 
   return (
-    <div className="bg-[#fefcf8] min-h-screen text-center font-sans">
+    <div className="bg-[#fefcf8] min-h-screen text-center font-sans relative">
       <div className="relative">
         <img
           src="/andy-banner.png"
           alt="Wheelie Clean Andy Banner"
-          className="w-full h-screen object-cover"
+          className="w-full h-[100vh] object-cover"
         />
         <div className="absolute top-0 left-0 w-full h-full bg-black bg-opacity-50 flex items-center justify-center">
           <div className="text-white text-4xl md:text-6xl font-extrabold drop-shadow-lg">
@@ -36,20 +36,20 @@ export default function App() {
         </div>
       </div>
 
-     <div className="absolute bottom-0 left-0 w-full bg-white/90 backdrop-blur-sm shadow-md flex items-center justify-between px-6 py-3 text-lg font-bold text-orange-600 z-20">
+      <div className="fixed bottom-0 left-0 w-full bg-[#fefcf8] border-t border-gray-200 py-4 px-8 flex justify-between items-center text-lg font-bold text-[#002d3f] z-50">
         <div className="flex gap-6">
           <a href="#services">Services</a>
           <a href="#about">About</a>
         </div>
-        <button
-          onClick={() => setShowModal(true)}
-          className="bg-green-600 hover:bg-green-700 text-white py-2 px-4 rounded-full text-base font-semibold shadow"
-        >
-          Book Now
-        </button>
+        <div className="text-orange-600 text-xl font-extrabold">Wheelie Clean Andy</div>
         <div className="flex gap-6">
           <a href="#contact">Contact</a>
-          <a href="#faq">FAQ</a>
+          <button
+            onClick={() => setShowModal(true)}
+            className="bg-green-600 hover:bg-green-700 text-white py-2 px-4 rounded-full text-base font-semibold"
+          >
+            Book Now
+          </button>
         </div>
       </div>
 
@@ -80,7 +80,7 @@ export default function App() {
         </div>
       )}
 
-      <div id="services" className="py-16 bg-orange-50">
+      <div id="services" className="py-16 bg-orange-50 mt-[100vh]">
         <h2 className="text-3xl font-bold text-orange-600 mb-4">What We Do</h2>
         <p className="max-w-xl mx-auto text-gray-700">
           Domestic and commercial bin cleaning services across Greater Manchester.
