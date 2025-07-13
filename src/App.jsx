@@ -37,9 +37,9 @@ export default function App() {
       </div>
 
       <div className="fixed bottom-0 left-0 w-full bg-white border-t border-gray-300 py-6 px-8 flex justify-between items-center text-4xl tracking-wide font-bold text-[#002d3f] z-50">
-        <div className="flex gap-10 uppercase">
+        <div className="flex gap-10 uppercase text-4xl">
           <a href="#services" className="hover:underline">Services</a>
-          <a href="#about" className="hover:underline">About</a>
+          <a href="#benefits" className="hover:underline">About</a>
         </div>
         <button
           onClick={() => setShowModal(true)}
@@ -47,9 +47,9 @@ export default function App() {
         >
           Book Now
         </button>
-        <div className="flex gap-10 uppercase">
-          <a href="#contact" className="hover:underline">Contact</a>
-          <a href="#faq" className="hover:underline">FAQ</a>
+        <div className="flex gap-10 uppercase text-4xl">
+          <a href="#whyandy" className="hover:underline">Contact</a>
+          <a href="#whyandy" className="hover:underline">FAQ</a>
         </div>
       </div>
 
@@ -101,6 +101,42 @@ export default function App() {
           </p>
         </div>
       </div>
+
+      <div id="benefits" className="py-20 px-6 bg-white text-left">
+        <h2 className="text-5xl font-bold text-orange-600 mb-6 uppercase tracking-wide">Benefits</h2>
+        <div className="max-w-4xl mx-auto text-gray-800 text-2xl leading-relaxed space-y-6">
+          <p>
+            Cleaning your bin regularly not only removes odours, but also helps eliminate harmful bacteria, deters pests like rats and flies, and improves hygiene around your home.
+          </p>
+          <p>
+            With our service, you enjoy the peace of mind that your waste containers are properly disinfected and safe, especially during warmer months when smells and bacteria multiply.
+          </p>
+          <p>
+            It’s a simple, affordable way to keep your household cleaner, healthier and happier — all without lifting a finger.
+          </p>
+        </div>
+      </div>
+
+      <div id="whyandy" className="py-20 px-6 bg-orange-100 text-left">
+        <h2 className="text-5xl font-bold text-orange-600 mb-6 uppercase tracking-wide">Why Andy</h2>
+        <div className="max-w-4xl mx-auto text-gray-800 text-2xl leading-relaxed space-y-6">
+          <p>
+            After being made redundant, I decided to build something of my own from the ground up. With the help of my nephew Bob — and his camera — we’re documenting every step of our journey as we grow <strong>Wheelie Clean Andy</strong> into a proper Manchester bin-cleaning force.
+          </p>
+          <p>
+            We’re just getting started, but we’re doing it properly — one bin, one customer, one clean at a time. 
+          </p>
+          <p>
+            Follow us as we turn this small idea into a big reality. Honest work, filmed for you to see. 💪📹
+          </p>
+        </div>
+      </div>
+
+      <div id="contact" className="py-20 px-6 bg-white text-left">
+        <h2 className="text-5xl font-bold text-orange-600 mb-6 uppercase tracking-wide">Contact</h2>
+        
+      </div>
+
     </div>
   );
 }
