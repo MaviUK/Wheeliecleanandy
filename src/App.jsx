@@ -36,11 +36,20 @@ export default function App() {
         </div>
       </div>
 
-      <div className="fixed bottom-0 left-0 w-full bg-white border-t border-gray-300 py-6 px-8 flex justify-between items-center text-4xl tracking-wide font-bold text-[#002d3f] z-50">
-        <div className="flex gap-10 uppercase text-4xl">
-          <a href="#services" className="hover:underline">Services</a>
-          <a href="#benefits" className="hover:underline">About</a>
-        </div>
+      
+      <div className="fixed bottom-0 left-0 w-full bg-white border-t border-gray-300 py-6 px-8 flex justify-center items-center gap-16 text-4xl tracking-wide font-bold text-[#002d3f] z-50 uppercase">
+        <a href="#services" className="hover:underline">What We Do</a>
+        <a href="#benefits" className="hover:underline">Benefits</a>
+        <button
+          onClick={() => setShowModal(true)}
+          className="bg-green-600 hover:bg-green-700 text-white py-5 px-10 rounded-full text-3xl uppercase tracking-wide shadow"
+        >
+          Book Now
+        </button>
+        <a href="#whyandy" className="hover:underline">Why Andy</a>
+        <a href="#myjourney" className="hover:underline">My Journey</a>
+      </div>
+
         <button
           onClick={() => setShowModal(true)}
           className="bg-green-600 hover:bg-green-700 text-white py-5 px-10 rounded-full text-3xl uppercase tracking-wide shadow"
@@ -132,10 +141,20 @@ export default function App() {
         </div>
       </div>
 
-      <div id="contact" className="py-20 px-6 bg-white text-left">
-        <h2 className="text-5xl font-bold text-orange-600 mb-6 uppercase tracking-wide">Contact</h2>
-        
+      
+      <div id="myjourney" className="py-20 px-6 bg-white text-left">
+        <h2 className="text-5xl font-bold text-orange-600 mb-6 uppercase tracking-wide">My Journey</h2>
+        <div className="max-w-4xl mx-auto text-gray-800 text-2xl leading-relaxed space-y-6">
+          <p>
+            We're filming and sharing every step of how we're building <strong>Wheelie Clean Andy</strong> from the ground up.
+            Stay tuned — real footage, real people, real bins.
+          </p>
+          <p>
+            Follow us on TikTok at <a href="https://www.tiktok.com/@wheeliecleanandy" className="text-orange-600 underline" target="_blank">@wheeliecleanandy</a>.
+          </p>
+        </div>
       </div>
+    
 
     </div>
   );
