@@ -62,30 +62,7 @@ export default function App() {
         </div>
       </div>
 
-      {showModal && (
-        <div className="fixed inset-0 bg-black bg-opacity-60 flex items-center justify-center z-50">
-          <div className="bg-white rounded-2xl shadow-xl w-full max-w-md p-6">
-            <div className="text-xl font-bold mb-4">Book a Bin Clean</div>
-            <input type="text" name="name" placeholder="Your Name" className="w-full border p-2 rounded mb-2" onChange={handleChange} />
-            <select name="bin" className="w-full border p-2 rounded mb-2" onChange={handleChange}>
-              <option>Green Bin</option>
-              <option>Black Bin</option>
-              <option>Blue Bin</option>
-            </select>
-            <select name="type" className="w-full border p-2 rounded mb-2" onChange={handleChange}>
-              <option>One-off</option>
-              <option>Monthly</option>
-              <option>Every 2 weeks</option>
-            </select>
-            <input type="text" name="address" placeholder="Full Address" className="w-full border p-2 rounded mb-2" onChange={handleChange} />
-            <input type="email" name="email" placeholder="Email Address" className="w-full border p-2 rounded mb-4" onChange={handleChange} />
-            <button onClick={sendWhatsApp} className="w-full bg-green-600 hover:bg-green-700 text-white py-2 px-4 rounded-full text-base font-semibold">
-              Send via WhatsApp
-            </button>
-            <button onClick={() => setShowModal(false)} className="text-gray-500 text-sm mt-3 underline">
-              Cancel
-            </button>
-          </div>
+      
         </div>
       )}
 
@@ -156,6 +133,33 @@ export default function App() {
       </div>
     
 
-    </div>
+    
+      {showModal && (
+        <div className="fixed inset-0 bg-black bg-opacity-60 flex items-center justify-center z-50">
+          <div className="bg-white rounded-2xl shadow-xl w-full max-w-md p-6">
+            <div className="text-xl font-bold mb-4">Book a Bin Clean</div>
+            <input type="text" name="name" placeholder="Your Name" className="w-full border p-2 rounded mb-2" onChange={handleChange} />
+            <select name="bin" className="w-full border p-2 rounded mb-2" onChange={handleChange}>
+              <option>Green Bin</option>
+              <option>Black Bin</option>
+              <option>Blue Bin</option>
+            </select>
+            <select name="type" className="w-full border p-2 rounded mb-2" onChange={handleChange}>
+              <option>One-off</option>
+              <option>Monthly</option>
+              <option>Every 2 weeks</option>
+            </select>
+            <input type="text" name="address" placeholder="Full Address" className="w-full border p-2 rounded mb-2" onChange={handleChange} />
+            <input type="email" name="email" placeholder="Email Address" className="w-full border p-2 rounded mb-4" onChange={handleChange} />
+            <button onClick={sendWhatsApp} className="w-full bg-green-600 hover:bg-green-700 text-white py-2 px-4 rounded-full text-base font-semibold">
+              Send via WhatsApp
+            </button>
+            <button onClick={() => setShowModal(false)} className="text-gray-500 text-sm mt-3 underline">
+              Cancel
+            </button>
+          </div>
+        </div>
+      )}
+</div>
   );
 }
