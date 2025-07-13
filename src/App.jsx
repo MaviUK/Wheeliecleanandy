@@ -9,6 +9,19 @@ export default function App() {
     type: "One-off",
     address: "",
     email: "",
+      <div id="benefits" className="py-20 px-6 bg-white text-left">
+        <h2 className="text-5xl font-bold text-orange-600 mb-6 uppercase tracking-wide">Benefits</h2>
+        <div className="max-w-4xl mx-auto text-gray-800 text-2xl leading-relaxed space-y-6">
+          <p>
+            Cleaning your bin regularly not only removes odours, but also helps eliminate harmful bacteria, deters pests like rats and flies, and improves hygiene around your home.
+          </p>
+          <p>
+            With our service, you enjoy the peace of mind that your waste containers are properly disinfected and safe, especially during warmer months when smells and bacteria multiply.
+          </p>
+          <p>
+            It’s a simple, affordable way to keep your household cleaner, healthier and happier — all without lifting a finger.
+          </p>
+        </div>
   });
 
   const handleChange = (e) => {
@@ -63,6 +76,7 @@ export default function App() {
       </div>
 
       
+        </div>
       )}
 
       <div id="services" className="py-20 px-6 bg-orange-50 text-left">
@@ -87,19 +101,6 @@ export default function App() {
         </div>
       </div>
 
-      <div id="benefits" className="py-20 px-6 bg-white text-left">
-        <h2 className="text-5xl font-bold text-orange-600 mb-6 uppercase tracking-wide">Benefits</h2>
-        <div className="max-w-4xl mx-auto text-gray-800 text-2xl leading-relaxed space-y-6">
-          <p>
-            Cleaning your bin regularly not only removes odours, but also helps eliminate harmful bacteria, deters pests like rats and flies, and improves hygiene around your home.
-          </p>
-          <p>
-            With our service, you enjoy the peace of mind that your waste containers are properly disinfected and safe, especially during warmer months when smells and bacteria multiply.
-          </p>
-          <p>
-            It’s a simple, affordable way to keep your household cleaner, healthier and happier — all without lifting a finger.
-          </p>
-        </div>
       </div>
 
       <div id="whyandy" className="py-20 px-6 bg-orange-100 text-left">
