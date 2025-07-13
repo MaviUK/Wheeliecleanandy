@@ -22,7 +22,7 @@ export default function App() {
   };
 
   return (
-    <div className="bg-[#fefcf8] min-h-screen font-sans">
+    <div className="bg-[#fefcf8] min-h-screen font-bebas">
       <div className="relative h-screen w-full overflow-hidden">
         <img
           src="/andy-banner.png"
@@ -30,26 +30,26 @@ export default function App() {
           className="absolute top-0 left-0 w-full h-full object-cover z-0"
         />
         <div className="absolute top-0 left-0 w-full h-full bg-black bg-opacity-50 z-10 flex items-center justify-center">
-          <h1 className="text-white text-4xl md:text-6xl font-bold drop-shadow-lg">
+          <h1 className="text-white text-5xl md:text-7xl font-bold drop-shadow-lg text-center">
             Wheelie Bin Cleaning, Manchester Style!
           </h1>
         </div>
       </div>
 
-      <div className="fixed bottom-0 left-0 w-full bg-white border-t border-gray-200 py-4 px-6 flex justify-between items-center text-base font-semibold text-gray-800 z-50">
-        <div className="flex gap-4">
+      <div className="fixed bottom-0 left-0 w-full bg-white border-t border-gray-300 py-5 px-6 flex justify-between items-center text-xl tracking-wide font-bold text-[#002d3f] z-50">
+        <div className="flex gap-6 uppercase">
           <a href="#services" className="hover:underline">Services</a>
           <a href="#about" className="hover:underline">About</a>
         </div>
-        <div className="text-orange-600 text-lg font-extrabold">Wheelie Clean Andy</div>
-        <div className="flex gap-4">
+        <button
+          onClick={() => setShowModal(true)}
+          className="bg-green-600 hover:bg-green-700 text-white py-3 px-6 rounded-full text-lg uppercase tracking-wide shadow"
+        >
+          Book Now
+        </button>
+        <div className="flex gap-6 uppercase">
           <a href="#contact" className="hover:underline">Contact</a>
-          <button
-            onClick={() => setShowModal(true)}
-            className="bg-green-600 hover:bg-green-700 text-white py-2 px-4 rounded-full"
-          >
-            Book Now
-          </button>
+          <a href="#faq" className="hover:underline">FAQ</a>
         </div>
       </div>
 
