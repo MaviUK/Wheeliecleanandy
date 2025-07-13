@@ -22,31 +22,31 @@ export default function App() {
   };
 
   return (
-    <div className="bg-[#fefcf8] min-h-screen text-center font-sans relative">
-      <div className="relative">
+    <div className="bg-[#fefcf8] min-h-screen font-sans">
+      <div className="relative h-screen w-full overflow-hidden">
         <img
           src="/andy-banner.png"
           alt="Wheelie Clean Andy Banner"
-          className="w-full h-[100vh] object-cover"
+          className="absolute top-0 left-0 w-full h-full object-cover z-0"
         />
-        <div className="absolute top-0 left-0 w-full h-full bg-black bg-opacity-50 flex items-center justify-center">
-          <div className="text-white text-4xl md:text-6xl font-extrabold drop-shadow-lg">
+        <div className="absolute top-0 left-0 w-full h-full bg-black bg-opacity-50 z-10 flex items-center justify-center">
+          <h1 className="text-white text-4xl md:text-6xl font-bold drop-shadow-lg">
             Wheelie Bin Cleaning, Manchester Style!
-          </div>
+          </h1>
         </div>
       </div>
 
-      <div className="fixed bottom-0 left-0 w-full bg-[#fefcf8] border-t border-gray-200 py-4 px-8 flex justify-between items-center text-lg font-bold text-[#002d3f] z-50">
-        <div className="flex gap-6">
-          <a href="#services">Services</a>
-          <a href="#about">About</a>
+      <div className="fixed bottom-0 left-0 w-full bg-white border-t border-gray-200 py-4 px-6 flex justify-between items-center text-base font-semibold text-gray-800 z-50">
+        <div className="flex gap-4">
+          <a href="#services" className="hover:underline">Services</a>
+          <a href="#about" className="hover:underline">About</a>
         </div>
-        <div className="text-orange-600 text-xl font-extrabold">Wheelie Clean Andy</div>
-        <div className="flex gap-6">
-          <a href="#contact">Contact</a>
+        <div className="text-orange-600 text-lg font-extrabold">Wheelie Clean Andy</div>
+        <div className="flex gap-4">
+          <a href="#contact" className="hover:underline">Contact</a>
           <button
             onClick={() => setShowModal(true)}
-            className="bg-green-600 hover:bg-green-700 text-white py-2 px-4 rounded-full text-base font-semibold"
+            className="bg-green-600 hover:bg-green-700 text-white py-2 px-4 rounded-full"
           >
             Book Now
           </button>
@@ -79,25 +79,6 @@ export default function App() {
           </div>
         </div>
       )}
-
-      <div id="services" className="py-16 bg-orange-50 mt-[100vh]">
-        <h2 className="text-3xl font-bold text-orange-600 mb-4">What We Do</h2>
-        <p className="max-w-xl mx-auto text-gray-700">
-          Domestic and commercial bin cleaning services across Greater Manchester.
-        </p>
-      </div>
-
-      <div id="about" className="py-16 bg-white">
-        <h2 className="text-3xl font-bold text-orange-600 mb-4">About Us</h2>
-        <p className="max-w-xl mx-auto text-gray-700">
-          We’re a local startup aiming to clean up Manchester one bin at a time — friendly, fast, and always sparkling results.
-        </p>
-      </div>
-
-      <div id="contact" className="py-16 bg-orange-100">
-        <h2 className="text-3xl font-bold text-orange-600 mb-4">Get in Touch</h2>
-        <p className="text-gray-700">Call or WhatsApp Andy at 07583 847902</p>
-      </div>
     </div>
   );
 }
