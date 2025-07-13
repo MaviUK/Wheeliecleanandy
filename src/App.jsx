@@ -36,21 +36,19 @@ export default function App() {
         </div>
       </div>
 
-      <div className="fixed bottom-0 left-0 w-full bg-white border-t border-gray-300 py-5 px-6 flex justify-between items-center text-xl tracking-wide font-bold text-[#002d3f] z-50">
-        <div className="flex gap-6 uppercase">
+      <div className="fixed bottom-0 left-0 w-full bg-white border-t border-gray-300 py-6 px-8 flex flex-col items-center text-2xl tracking-wide font-bold text-[#002d3f] z-50 space-y-3">
+        <div className="flex gap-8 uppercase justify-center">
           <a href="#services" className="hover:underline">Services</a>
           <a href="#about" className="hover:underline">About</a>
-        </div>
-        <button
-          onClick={() => setShowModal(true)}
-          className="bg-green-600 hover:bg-green-700 text-white py-3 px-6 rounded-full text-lg uppercase tracking-wide shadow"
-        >
-          Book Now
-        </button>
-        <div className="flex gap-6 uppercase">
           <a href="#contact" className="hover:underline">Contact</a>
           <a href="#faq" className="hover:underline">FAQ</a>
         </div>
+        <button
+          onClick={() => setShowModal(true)}
+          className="bg-green-600 hover:bg-green-700 text-white py-4 px-8 rounded-full text-2xl uppercase tracking-wide shadow"
+        >
+          Book Now
+        </button>
       </div>
 
       {showModal && (
