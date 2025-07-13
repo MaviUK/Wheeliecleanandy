@@ -63,7 +63,6 @@ export default function App() {
       </div>
 
       
-        </div>
       )}
 
       <div id="services" className="py-20 px-6 bg-orange-50 text-left">
