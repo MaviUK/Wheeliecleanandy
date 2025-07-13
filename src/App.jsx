@@ -1,54 +1,87 @@
-import React from 'react'
+import { useState } from "react";
 
-const App = () => {
+export default function App() {
+  const [showModal, setShowModal] = useState(false);
+
+  const handleBookNow = () => {
+    window.open("https://wa.me/447555178484?text=Hi%20I%20want%20my%20bin%20cleaned!", "_blank");
+  };
+
   return (
-    <div className="text-center font-sans">
-      <div className="w-full h-[90vh] bg-cover bg-center" style={{ backgroundImage: "url('/banner.png')" }}></div>
+    <div className="bg-black text-white min-h-screen">
+      {/* Hero Banner */}
+      <img
+        src="/banner.jpg"
+        alt="Wheelie Clean Andy Banner"
+        className="w-full h-screen object-cover"
+      />
 
-      <div className="flex justify-center items-center space-x-6 text-2xl font-bold py-6 bg-black text-white">
-        <a href="#services">What We Do</a>
-        <a href="#benefits">Benefits</a>
-        <button className="bg-green-500 text-black px-6 py-2 rounded-full">Book Now</button>
-        <a href="#why">Why Andy</a>
-        <a href="#journey">My Journey</a>
-      </div>
+      {/* Navigation */}
+      <nav className="flex justify-center items-center py-6 text-xl font-bold tracking-widest space-x-6 uppercase bg-black">
+        <a href="#services" className="hover:text-lime-300">What We Do</a>
+        <a href="#benefits" className="hover:text-lime-300">Benefits</a>
+        <button
+          onClick={handleBookNow}
+          className="px-6 py-2 bg-pink-600 text-white rounded-full hover:bg-pink-500 text-2xl shadow-lg"
+        >
+          Book Now
+        </button>
+        <a href="#whyandy" className="hover:text-lime-300">Why Andy</a>
+        <a href="#journey" className="hover:text-lime-300">My Journey</a>
+      </nav>
 
-      <div id="services" className="py-20 px-6 bg-white text-black text-left">
-        <h2 className="text-5xl font-bold text-green-600 mb-6">What We Do</h2>
-        <p className="text-2xl max-w-4xl leading-relaxed mx-auto">
-          We clean household wheelie bins in an eco-friendly and hygienic manner. Using biodegradable products and
-          high-pressure cleaning systems, we remove dirt, grime, and odor — leaving your bin fresh, sanitized, and
-          safe.
-        </p>
-      </div>
-
-      <div id="benefits" className="py-20 px-6 bg-gray-100 text-black text-left">
-        <h2 className="text-5xl font-bold text-orange-600 mb-6">Benefits</h2>
-        <p className="text-2xl max-w-4xl leading-relaxed mx-auto">
-          Regularly cleaned bins reduce unpleasant smells, deter pests like maggots and rats, and help maintain
-          hygiene around your home. A clean bin also improves curb appeal and reduces bacterial buildup.
-        </p>
-      </div>
-
-      <div id="why" className="py-20 px-6 bg-white text-black text-left">
-        <h2 className="text-5xl font-bold text-pink-600 mb-6">Why Andy?</h2>
-        <p className="text-2xl max-w-4xl leading-relaxed mx-auto">
-          After being made redundant, I decided to build something from nothing with my nephew Bob and a camera. We're
-          documenting every step as I build a wheelie bin cleaning business from scratch. Join the journey and support
-          local!
-        </p>
-      </div>
-
-      <div id="journey" className="py-20 px-6 bg-black text-white text-left">
-        <h2 className="text-5xl font-bold text-green-400 mb-6">My Journey</h2>
-        <div className="flex justify-center gap-8 flex-wrap">
-          <iframe src="https://www.tiktok.com/embed/v2/0000000001" width="300" height="500" />
-          <iframe src="https://www.tiktok.com/embed/v2/0000000002" width="300" height="500" />
-          <iframe src="https://www.tiktok.com/embed/v2/0000000003" width="300" height="500" />
+      {/* What We Do */}
+      <section id="services" className="py-20 px-6 bg-white text-black">
+        <h2 className="text-5xl font-bold text-lime-700 mb-6 uppercase tracking-wide">What We Do</h2>
+        <div className="max-w-4xl mx-auto text-2xl space-y-4">
+          <p>We clean household bins on a regular schedule, removing dirt, grime, and odor.</p>
+          <p>All cleaning is done in an eco-friendly manner using biodegradable cleaning solutions and water-saving techniques.</p>
         </div>
-      </div>
-    </div>
-  )
-}
+      </section>
 
-export default App
+      {/* Benefits */}
+      <section id="benefits" className="py-20 px-6 bg-lime-100 text-black">
+        <h2 className="text-5xl font-bold text-orange-600 mb-6 uppercase tracking-wide">Benefits</h2>
+        <div className="max-w-4xl mx-auto text-2xl space-y-4">
+          <p>✔️ No more smelly bins attracting flies.</p>
+          <p>✔️ Eco-friendly and safe for kids and pets.</p>
+          <p>✔️ Affordable, professional, and hassle-free.</p>
+        </div>
+      </section>
+
+      {/* Why Andy */}
+      <section id="whyandy" className="py-20 px-6 bg-white text-black">
+        <h2 className="text-5xl font-bold text-pink-600 mb-6 uppercase tracking-wide">Why Andy</h2>
+        <div className="max-w-4xl mx-auto text-2xl space-y-6">
+          <p>I was made redundant, and with my nephew Bob behind the camera, we’ve decided to film and build this business from the ground up. We’re bringing the bins back to life — one street at a time.</p>
+          <p>Follow us and be part of the journey from nothing to something real.</p>
+        </div>
+      </section>
+
+      {/* My Journey / TikTok Embed */}
+      <section id="journey" className="py-20 px-6 bg-black text-white">
+        <h2 className="text-5xl font-bold text-pink-500 mb-6 uppercase tracking-wide text-center">My Journey</h2>
+        <div className="flex flex-wrap justify-center gap-6">
+          <iframe
+            src="https://www.tiktok.com/embed/v2/1"
+            width="325"
+            height="570"
+            allowFullScreen
+          ></iframe>
+          <iframe
+            src="https://www.tiktok.com/embed/v2/2"
+            width="325"
+            height="570"
+            allowFullScreen
+          ></iframe>
+          <iframe
+            src="https://www.tiktok.com/embed/v2/3"
+            width="325"
+            height="570"
+            allowFullScreen
+          ></iframe>
+        </div>
+      </section>
+    </div>
+  );
+}
