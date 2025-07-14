@@ -10,22 +10,23 @@ const App = () => {
       ></div>
 
       {/* Navigation */}
-      <div className="flex flex-wrap justify-center items-center gap-4 text-xl md:text-2xl py-4 md:py-6 bg-black text-white nav-font">
-        <a href="#services">What We Do</a>
-        <a href="#benefits">Benefits</a>
+      <div className="bg-black text-white nav-font py-4 md:py-6">
+        <div className="flex justify-center flex-wrap gap-4 text-xl md:text-2xl">
+          <a href="#services">What We Do</a>
+          <a href="#benefits">Benefits</a>
+          <a href="#why">Why Andy</a>
+          <a href="#contact">Contact</a>
+        </div>
 
-        {/* Book Now on its own line on mobile */}
-        <div className="w-full md:w-auto flex justify-center">
+        {/* Book Now - own line on mobile */}
+        <div className="flex justify-center mt-4 md:mt-0">
           <button
             onClick={() => window.open('https://wa.me/447555178484', '_blank')}
-            className="bg-green-500 text-black px-6 py-2 rounded-full hover:bg-green-600 transition"
+            className="bg-green-500 text-black px-6 py-2 rounded-full hover:bg-green-600 transition text-xl md:text-2xl"
           >
             Book Now
           </button>
         </div>
-
-        <a href="#why">Why Andy</a>
-        <a href="#contact">Contact</a>
       </div>
 
       {/* What We Do Section */}
