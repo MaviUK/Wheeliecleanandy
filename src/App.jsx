@@ -1,55 +1,54 @@
+import React from 'react'
 
-import React from 'react';
-
-function App() {
+const App = () => {
   return (
-    <div>
-      <nav className="bg-white shadow-md fixed w-full z-50">
-        <div className="flex justify-center py-4 space-x-8 text-xl font-bold uppercase">
-          <a href="#services" className="hover:text-orange-500">What We Do</a>
-          <a href="#benefits" className="hover:text-orange-500">Benefits</a>
-          <button onClick={() => window.open('https://wa.me/447555178484', '_blank')} className="bg-orange-500 text-white px-4 py-2 rounded hover:bg-orange-600">
-            Book Now
-          </button>
-          <a href="#why-andy" className="hover:text-orange-500">Why Andy</a>
-          <a href="#my-journey" className="hover:text-orange-500">My Journey</a>
+    <div className="text-center font-sans">
+      <div className="w-full h-[90vh] bg-cover bg-center" style={{ backgroundImage: "url('/banner.png')" }}></div>
+
+      <div className="flex justify-center items-center space-x-6 text-2xl font-bold py-6 bg-black text-white">
+        <a href="#services">What We Do</a>
+        <a href="#benefits">Benefits</a>
+        <button onClick={() => window.open('https://wa.me/447555178484', '_blank')} className="bg-green-500 text-black px-6 py-2 rounded-full">Book Now</button>
+        <a href="#why">Why Andy</a>
+        <a href="#journey">My Journey</a>
+      </div>
+
+      <div id="services" className="py-20 px-6 bg-white text-black text-left">
+        <h2 className="text-5xl font-bold text-green-600 mb-6">What We Do</h2>
+        <p className="text-2xl max-w-4xl leading-relaxed mx-auto">
+          We clean household wheelie bins in an eco-friendly and hygienic manner. Using biodegradable products and
+          high-pressure cleaning systems, we remove dirt, grime, and odor — leaving your bin fresh, sanitized, and
+          safe.
+        </p>
+      </div>
+
+      <div id="benefits" className="py-20 px-6 bg-gray-100 text-black text-left">
+        <h2 className="text-5xl font-bold text-orange-600 mb-6">Benefits</h2>
+        <p className="text-2xl max-w-4xl leading-relaxed mx-auto">
+          Regularly cleaned bins reduce unpleasant smells, deter pests like maggots and rats, and help maintain
+          hygiene around your home. A clean bin also improves curb appeal and reduces bacterial buildup.
+        </p>
+      </div>
+
+      <div id="why" className="py-20 px-6 bg-white text-black text-left">
+        <h2 className="text-5xl font-bold text-pink-600 mb-6">Why Andy?</h2>
+        <p className="text-2xl max-w-4xl leading-relaxed mx-auto">
+          After being made redundant, I decided to build something from nothing with my nephew Bob and a camera. We're
+          documenting every step as I build a wheelie bin cleaning business from scratch. Join the journey and support
+          local!
+        </p>
+      </div>
+
+      <div id="journey" className="py-20 px-6 bg-black text-white text-left">
+        <h2 className="text-5xl font-bold text-green-400 mb-6">My Journey</h2>
+        <div className="flex justify-center gap-8 flex-wrap">
+          <iframe src="https://www.tiktok.com/embed/v2/0000000001" width="300" height="500" />
+          <iframe src="https://www.tiktok.com/embed/v2/0000000002" width="300" height="500" />
+          <iframe src="https://www.tiktok.com/embed/v2/0000000003" width="300" height="500" />
         </div>
-      </nav>
-
-      <header className="pt-24">
-        <img src="/banner.png" alt="Wheelie Clean Andy Banner" className="w-full object-cover" />
-      </header>
-
-      <section id="services" className="p-8 text-center">
-        <h2 className="text-4xl font-bold mb-4">What We Do</h2>
-        <p>We clean household wheelie bins using eco-friendly methods that are safe for your family and the environment. We remove smells, grime, insects, and bacteria so your bins stay fresh and clean all year round.</p>
-      </section>
-
-      <section id="benefits" className="p-8 bg-gray-100 text-center">
-        <h2 className="text-4xl font-bold mb-4">Benefits</h2>
-        <ul className="list-disc list-inside text-left max-w-md mx-auto">
-          <li>Eliminates foul odours</li>
-          <li>Deters insects and pests</li>
-          <li>Eco-friendly products</li>
-          <li>Improves hygiene</li>
-          <li>Professional, reliable service</li>
-        </ul>
-      </section>
-
-      <section id="why-andy" className="p-8 text-center">
-        <h2 className="text-4xl font-bold mb-4">Why Andy</h2>
-        <p>After redundancy, I teamed up with my nephew Bob (and his camera!) to build this business from scratch. We're filming the journey — join us and see how far we go!</p>
-      </section>
-
-      <section id="my-journey" className="p-8 bg-gray-100 text-center">
-        <h2 className="text-4xl font-bold mb-4">My Journey on TikTok</h2>
-        <blockquote className="tiktok-embed" cite="https://www.tiktok.com/@wheeliecleanandy" data-unique-id="wheeliecleanandy" style={{ maxWidth: '605px', minWidth: '325px' }}>
-          <section>Loading TikTok...</section>
-        </blockquote>
-        <script async src="https://www.tiktok.com/embed.js"></script>
-      </section>
+      </div>
     </div>
-  );
+  )
 }
 
-export default App;
+export default App
