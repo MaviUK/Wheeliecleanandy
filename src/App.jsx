@@ -15,24 +15,36 @@ const App = () => {
         style={{ backgroundImage: "url('/banner.png')" }}
       ></div>
 
-      {/* Navigation */}
-      <div className="bg-black text-white nav-font py-4 md:py-6">
-        <div className="flex justify-center flex-wrap gap-4 text-xl md:text-2xl">
+      {/* Desktop Menu */}
+      <div className="hidden md:flex justify-center items-center gap-6 text-2xl py-6 bg-black text-white nav-font">
+        <a href="#services">What We Do</a>
+        <a href="#benefits">Benefits</a>
+
+        <button
+          onClick={() => window.open('https://wa.me/447555178484', '_blank')}
+          className="bg-green-500 text-black px-6 py-2 rounded-full hover:bg-green-600 transition"
+        >
+          Book Now
+        </button>
+
+        <a href="#why">Why Andy</a>
+        <a href="#contact">Contact</a>
+      </div>
+
+      {/* Mobile Menu */}
+      <div className="flex flex-col md:hidden items-center py-4 bg-black text-white nav-font text-xl space-y-2">
+        <div className="flex flex-wrap justify-center gap-4">
           <a href="#services">What We Do</a>
           <a href="#benefits">Benefits</a>
           <a href="#why">Why Andy</a>
           <a href="#contact">Contact</a>
         </div>
-
-        {/* Book Now - own line on mobile */}
-        <div className="flex justify-center mt-4 md:mt-0">
-          <button
-            onClick={() => window.open('https://wa.me/447555178484', '_blank')}
-            className="bg-green-500 text-black px-6 py-2 rounded-full hover:bg-green-600 transition text-xl md:text-2xl"
-          >
-            Book Now
-          </button>
-        </div>
+        <button
+          onClick={() => window.open('https://wa.me/447555178484', '_blank')}
+          className="bg-green-500 text-black px-6 py-2 rounded-full hover:bg-green-600 transition"
+        >
+          Book Now
+        </button>
       </div>
 
       {/* What We Do Section */}
