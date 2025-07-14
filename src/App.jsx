@@ -13,12 +13,17 @@ const App = () => {
       <div className="flex flex-wrap justify-center items-center gap-4 text-xl md:text-2xl py-4 md:py-6 bg-black text-white nav-font">
         <a href="#services">What We Do</a>
         <a href="#benefits">Benefits</a>
-        <button
-          onClick={() => window.open('https://wa.me/447555178484', '_blank')}
-          className="bg-green-500 text-black px-4 py-2 rounded-full hover:bg-green-600 transition"
-        >
-          Book Now
-        </button>
+
+        {/* Book Now on its own line on mobile */}
+        <div className="w-full md:w-auto flex justify-center">
+          <button
+            onClick={() => window.open('https://wa.me/447555178484', '_blank')}
+            className="bg-green-500 text-black px-6 py-2 rounded-full hover:bg-green-600 transition"
+          >
+            Book Now
+          </button>
+        </div>
+
         <a href="#why">Why Andy</a>
         <a href="#contact">Contact</a>
       </div>
@@ -83,7 +88,6 @@ const App = () => {
           </button>
         </form>
       </div>
-
     </div>
   )
 }
