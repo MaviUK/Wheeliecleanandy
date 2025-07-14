@@ -10,7 +10,7 @@ const App = () => {
   <a href="#benefits">Benefits</a>
   <button onClick={() => window.open('https://wa.me/447555178484', '_blank')} className="bg-green-500 text-black px-6 py-2 rounded-full">Book Now</button>
   <a href="#why">Why Andy</a>
-  <a href="#journey">My Journey</a>
+  <a href="#journey">Contact</a>
 </div>
 
 
@@ -40,13 +40,39 @@ const App = () => {
         </p>
       </div>
 
-      <div id="journey" className="py-20 px-6 bg-black text-white text-left">
-        <h2 className="text-5xl font-bold text-green-400 mb-6">My Journey</h2>
-        <div className="flex justify-center gap-8 flex-wrap">
-          <iframe src="https://www.tiktok.com/embed/v2/0000000001" width="300" height="500" />
-          <iframe src="https://www.tiktok.com/embed/v2/0000000002" width="300" height="500" />
-          <iframe src="https://www.tiktok.com/embed/v2/0000000003" width="300" height="500" />
-        </div>
+      <div id="contact" className="py-20 px-6 bg-black text-white text-left">
+  <h2 className="text-5xl font-bold text-green-400 mb-6">Contact</h2>
+  <form name="contact" method="POST" data-netlify="true" className="max-w-md mx-auto space-y-4">
+    <input type="hidden" name="form-name" value="contact" />
+    <input 
+      type="text" 
+      name="name" 
+      placeholder="Your Name" 
+      required 
+      className="w-full p-2 rounded text-black" 
+    />
+    <input 
+      type="email" 
+      name="email" 
+      placeholder="Your Email" 
+      required 
+      className="w-full p-2 rounded text-black" 
+    />
+    <textarea 
+      name="message" 
+      placeholder="Your Message" 
+      required 
+      className="w-full p-2 rounded text-black"
+    ></textarea>
+    <button 
+      type="submit" 
+      className="bg-green-500 text-black px-4 py-2 rounded hover:bg-green-600 transition"
+    >
+      Send
+    </button>
+  </form>
+</div>
+
       </div>
     </div>
   )
