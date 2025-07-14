@@ -5,7 +5,7 @@ const App = () => {
     <div className="text-center font-sans">
       <div className="w-full h-[90vh] bg-cover bg-center" style={{ backgroundImage: "url('/banner.png')" }}></div>
 
-      <div className="flex justify-center items-center space-x-6 text-4xl py-6 bg-black text-white nav-font">
+      <div className="flex justify-center items-center space-x-10 text-4xl py-6 bg-black text-white nav-font">
   <a href="#services">What We Do</a>
   <a href="#benefits">Benefits</a>
   <button onClick={() => window.open('https://wa.me/447555178484', '_blank')} className="bg-green-500 text-black px-6 py-2 rounded-full">Book Now</button>
