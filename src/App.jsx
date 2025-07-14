@@ -1,6 +1,8 @@
-import React from 'react'
+import React, { useState } from 'react'
 
 const App = () => {
+  const [showModal, setShowModal] = useState(false)
+
   return (
     <div className="text-center font-sans">
       {/* Mobile Banner */}
@@ -21,7 +23,7 @@ const App = () => {
         <a href="#benefits">Benefits</a>
 
         <button
-          onClick={() => window.open('https://wa.me/447555178484', '_blank')}
+          onClick={() => setShowModal(true)}
           className="bg-green-500 text-black px-6 py-2 rounded-full hover:bg-green-600 transition"
         >
           Book Now
@@ -40,7 +42,7 @@ const App = () => {
           <a href="#contact">Contact</a>
         </div>
         <button
-          onClick={() => window.open('https://wa.me/447555178484', '_blank')}
+          onClick={() => setShowModal(true)}
           className="bg-green-500 text-black px-6 py-2 rounded-full hover:bg-green-600 transition"
         >
           Book Now
@@ -107,6 +109,28 @@ const App = () => {
           </button>
         </form>
       </div>
+
+      {/* Book Now Modal */}
+      {showModal && (
+        <div className="fixed inset-0 bg-black bg-opacity-60 flex items-center justify-center z-50">
+          <div className="bg-white rounded-2xl shadow-xl w-full max-w-md p-6">
+            <div className="flex justify-between items-center mb-4">
+              <h2 className="text-xl font-bold">Book a Bin Clean</h2>
+              <button onClick={() => setShowModal(false)} className="text-black text-2xl">×</button>
+            </div>
+            <form className="space-y-3">
+              <input type="text" placeholder="Your Name" className="w-full p-2 border rounded text-black" />
+              <input type="text" placeholder="Select Bin" className="w-full p-2 border rounded text-black" />
+              <input type="text" placeholder="Full Address" className="w-full p-2 border rounded text-black" />
+              <input type="email" placeholder="Email Address" className="w-full p-2 border rounded text-black" />
+              <button type="button" className="w-full bg-green-500 text-black py-2 rounded hover:bg-green-600">
+                Send via WhatsApp
+              </button>
+            </form>
+          </div>
+        </div>
+      )}
+
     </div>
   )
 }
