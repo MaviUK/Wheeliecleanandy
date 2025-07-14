@@ -16,7 +16,7 @@ const App = () => {
       ></div>
 
       {/* Desktop Menu */}
-      <div className="hidden md:flex justify-center items-center gap-6 text-2xl py-6 bg-black text-white nav-font">
+      <div className="hidden md:flex justify-center items-center gap-10 text-6xl py-6 bg-black text-white nav-font">
         <a href="#services">What We Do</a>
         <a href="#benefits">Benefits</a>
 
