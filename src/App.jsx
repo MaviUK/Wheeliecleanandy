@@ -46,7 +46,7 @@ const App = () => {
       <div id="services" className="py-10 md:py-20 px-4 md:px-6 bg-white text-black text-left">
         <h2 className="text-3xl md:text-5xl font-bold text-green-600 mb-6">What We Do</h2>
         <p className="text-lg md:text-2xl max-w-4xl leading-relaxed mx-auto">
-          We clean household wheelie bins in an eco-friendly and hygienic manner. Using biodegradable products and
+          We clean household wheelie bins around the Manchester area in an eco-friendly and hygienic manner. Using biodegradable products and
           high-pressure cleaning systems, we remove dirt, grime, and odor — leaving your bin fresh, sanitized, and safe.
         </p>
       </div>
