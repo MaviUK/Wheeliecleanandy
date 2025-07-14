@@ -6,13 +6,12 @@ const App = () => {
       <div className="w-full h-[90vh] bg-cover bg-center" style={{ backgroundImage: "url('/banner.png')" }}></div>
 
       <div className="flex justify-center items-center space-x-16 text-4xl py-6 bg-black text-white nav-font">
-  <a href="#services">What We Do</a>
-  <a href="#benefits">Benefits</a>
-  <button onClick={() => window.open('https://wa.me/447555178484', '_blank')} className="bg-green-500 text-black px-6 py-2 rounded-full">Book Now</button>
-  <a href="#why">Why Andy</a>
-  <a href="#journey">Contact</a>
-</div>
-
+        <a href="#services">What We Do</a>
+        <a href="#benefits">Benefits</a>
+        <button onClick={() => window.open('https://wa.me/447555178484', '_blank')} className="bg-green-500 text-black px-6 py-2 rounded-full">Book Now</button>
+        <a href="#why">Why Andy</a>
+        <a href="#contact">Contact</a>
+      </div>
 
       <div id="services" className="py-20 px-6 bg-white text-black text-left">
         <h2 className="text-5xl font-bold text-green-600 mb-6">What We Do</h2>
@@ -41,39 +40,38 @@ const App = () => {
       </div>
 
       <div id="contact" className="py-20 px-6 bg-black text-white text-left">
-  <h2 className="text-5xl font-bold text-green-400 mb-6">Contact</h2>
-  <form name="contact" method="POST" data-netlify="true" className="max-w-md mx-auto space-y-4">
-    <input type="hidden" name="form-name" value="contact" />
-    <input 
-      type="text" 
-      name="name" 
-      placeholder="Your Name" 
-      required 
-      className="w-full p-2 rounded text-black" 
-    />
-    <input 
-      type="email" 
-      name="email" 
-      placeholder="Your Email" 
-      required 
-      className="w-full p-2 rounded text-black" 
-    />
-    <textarea 
-      name="message" 
-      placeholder="Your Message" 
-      required 
-      className="w-full p-2 rounded text-black"
-    ></textarea>
-    <button 
-      type="submit" 
-      className="bg-green-500 text-black px-4 py-2 rounded hover:bg-green-600 transition"
-    >
-      Send
-    </button>
-  </form>
-</div>
-
+        <h2 className="text-5xl font-bold text-green-400 mb-6">Contact</h2>
+        <form name="contact" method="POST" data-netlify="true" className="max-w-md mx-auto space-y-4">
+          <input type="hidden" name="form-name" value="contact" />
+          <input 
+            type="text" 
+            name="name" 
+            placeholder="Your Name" 
+            required 
+            className="w-full p-2 rounded text-black" 
+          />
+          <input 
+            type="email" 
+            name="email" 
+            placeholder="Your Email" 
+            required 
+            className="w-full p-2 rounded text-black" 
+          />
+          <textarea 
+            name="message" 
+            placeholder="Your Message" 
+            required 
+            className="w-full p-2 rounded text-black"
+          ></textarea>
+          <button 
+            type="submit" 
+            className="bg-green-500 text-black px-4 py-2 rounded hover:bg-green-600 transition"
+          >
+            Send
+          </button>
+        </form>
       </div>
+
     </div>
   )
 }
