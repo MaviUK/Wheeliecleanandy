@@ -5,13 +5,14 @@ const App = () => {
     <div className="text-center font-sans">
       <div className="w-full h-[90vh] bg-cover bg-center" style={{ backgroundImage: "url('/banner.png')" }}></div>
 
-      <div className="flex justify-center items-center space-x-6 text-2xl font-bold py-6 bg-black text-white">
-        <a href="#services">What We Do</a>
-        <a href="#benefits">Benefits</a>
-        <button onClick={() => window.open('https://wa.me/447555178484', '_blank')} className="bg-green-500 text-black px-6 py-2 rounded-full">Book Now</button>
-        <a href="#why">Why Andy</a>
-        <a href="#journey">My Journey</a>
-      </div>
+      <div className="flex justify-center items-center space-x-6 text-2xl py-6 bg-black text-white nav-font">
+  <a href="#services">What We Do</a>
+  <a href="#benefits">Benefits</a>
+  <button onClick={() => window.open('https://wa.me/447555178484', '_blank')} className="bg-green-500 text-black px-6 py-2 rounded-full">Book Now</button>
+  <a href="#why">Why Andy</a>
+  <a href="#journey">My Journey</a>
+</div>
+
 
       <div id="services" className="py-20 px-6 bg-white text-black text-left">
         <h2 className="text-5xl font-bold text-green-600 mb-6">What We Do</h2>
