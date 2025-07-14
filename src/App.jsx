@@ -108,7 +108,7 @@ ${binDetails}
 Address: ${address}
 Email: ${email}`
 
-                const url = `https://wa.me/447555178484?text=${encodeURIComponent(message)}`
+                const url = `https://wa.me/447583847902?text=${encodeURIComponent(message)}`
                 window.open(url, '_blank')
               }}
               className="space-y-4"
