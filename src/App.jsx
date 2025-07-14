@@ -86,7 +86,7 @@ const App = () => {
         <div className="fixed inset-0 bg-black bg-opacity-60 flex items-center justify-center z-50">
           <div className="bg-white p-6 rounded-xl shadow-xl w-full max-w-lg">
             <div className="flex justify-between items-center mb-4">
-              <h2 className="text-2xl font-bold">Book a Bin Clean</h2>
+              <h2 className="text-2xl font-bold text-black">Book a Bin Clean</h2>
               <button onClick={() => setShowModal(false)} className="text-2xl">&times;</button>
             </div>
 
