@@ -90,52 +90,74 @@ const App = () => {
               <button onClick={() => setShowModal(false)} className="text-2xl">&times;</button>
             </div>
 
-           <form className="space-y-4">
-  <input type="text" placeholder="Your Name" className="w-full p-2 border rounded text-black" required />
+            <form
+              onSubmit={(e) => {
+                e.preventDefault()
 
-  {bins.map((bin, index) => (
-    <div key={index} className="flex gap-2">
-      <select
-        value={bin.type}
-        onChange={(e) => handleBinChange(index, 'type', e.target.value)}
-        className="flex-1 p-2 border rounded text-black"
-        required
-      >
-        <option value="">Select Bin</option>
-        <option value="Black">Black</option>
-        <option value="Green">Green</option>
-        <option value="Blue">Blue</option>
-      </select>
+                const name = e.target.elements.name.value
+                const address = e.target.elements.address.value
+                const email = e.target.elements.email.value
 
-      <input
-        type="number"
-        min="1"
-        value={bin.quantity}
-        onChange={(e) => handleBinChange(index, 'quantity', e.target.value)}
-        className="w-20 p-2 border rounded text-black"
-        required
-      />
+                const binDetails = bins
+                  .map((bin, index) => `Bin ${index + 1}: ${bin.type} x${bin.quantity} - ${bin.frequency}`)
+                  .join('\n')
 
-      <select
-        value={bin.frequency}
-        onChange={(e) => handleBinChange(index, 'frequency', e.target.value)}
-        className="flex-1 p-2 border rounded text-black"
-        required
-      >
-        <option value="">Frequency</option>
-        <option value="One-off">One-off</option>
-        <option value="4 Weekly">4 Weekly</option>
-      </select>
-    </div>
-  ))}
+                const message = `Booking Request:
+Name: ${name}
+${binDetails}
+Address: ${address}
+Email: ${email}`
 
-  <button type="button" onClick={addBin} className="text-green-500 text-left">+ Add Another Bin</button>
+                const url = `https://wa.me/447555178484?text=${encodeURIComponent(message)}`
+                window.open(url, '_blank')
+              }}
+              className="space-y-4"
+            >
+              <input name="name" type="text" placeholder="Your Name" className="w-full p-2 border rounded text-black" required />
 
-  <input type="text" placeholder="Full Address" className="w-full p-2 border rounded text-black" required />
-  <input type="email" placeholder="Email Address" className="w-full p-2 border rounded text-black" required />
+              {bins.map((bin, index) => (
+                <div key={index} className="flex gap-2">
+                  <select
+                    value={bin.type}
+                    onChange={(e) => handleBinChange(index, 'type', e.target.value)}
+                    className="flex-1 p-2 border rounded text-black"
+                    required
+                  >
+                    <option value="">Select Bin</option>
+                    <option value="Black">Black</option>
+                    <option value="Green">Green</option>
+                    <option value="Blue">Blue</option>
+                  </select>
 
-  <button type="submit" className="w-full bg-green-500 text-black py-2 rounded hover:bg-green-600 transition">Send via WhatsApp</button>
-</form>
+                  <input
+                    type="number"
+                    min="1"
+                    value={bin.quantity}
+                    onChange={(e) => handleBinChange(index, 'quantity', e.target.value)}
+                    className="w-20 p-2 border rounded text-black"
+                    required
+                  />
+
+                  <select
+                    value={bin.frequency}
+                    onChange={(e) => handleBinChange(index, 'frequency', e.target.value)}
+                    className="flex-1 p-2 border rounded text-black"
+                    required
+                  >
+                    <option value="">Frequency</option>
+                    <option value="One-off">One-off</option>
+                    <option value="4 Weekly">4 Weekly</option>
+                  </select>
+                </div>
+              ))}
+
+              <button type="button" onClick={addBin} className="text-green-500 text-left">+ Add Another Bin</button>
+
+              <input name="address" type="text" placeholder="Full Address" className="w-full p-2 border rounded text-black" required />
+              <input name="email" type="email" placeholder="Email Address" className="w-full p-2 border rounded text-black" required />
+
+              <button type="submit" className="w-full bg-green-500 text-black py-2 rounded hover:bg-green-600 transition">Send via WhatsApp</button>
+            </form>
           </div>
         </div>
       )}
@@ -144,3 +166,4 @@ const App = () => {
 }
 
 export default App
+
