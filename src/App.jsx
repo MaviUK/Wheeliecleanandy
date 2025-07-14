@@ -3,9 +3,15 @@ import React from 'react'
 const App = () => {
   return (
     <div className="text-center font-sans">
-      {/* Hero Banner */}
+      {/* Mobile Banner */}
       <div
-        className="w-full h-[50vh] md:h-[90vh] bg-cover bg-center"
+        className="w-full h-[50vh] bg-cover bg-center md:hidden"
+        style={{ backgroundImage: "url('/banner-mobile.png')" }}
+      ></div>
+
+      {/* Desktop Banner */}
+      <div
+        className="hidden md:block w-full h-[90vh] bg-cover bg-center"
         style={{ backgroundImage: "url('/banner.png')" }}
       ></div>
 
